@@ -24,10 +24,10 @@
 ## ER다이어그램
 ```mermaid
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-
+    BATTERY ||--{ PICTURE : contains
+    PICTURE ||--{ DEFECT : contains
+    CONDITION
+    USER
 ```
 
 
