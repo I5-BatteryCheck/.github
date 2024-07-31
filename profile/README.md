@@ -19,7 +19,17 @@
 - **프로그래밍 언어**: 
 - **개발 도구**: 
 - **프레임워크**: 
-- **데이터베이스**: 
+- **데이터베이스**:
+
+## ER다이어그램
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+
+```
+
 
 ## 주요 기능
 
