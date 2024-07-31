@@ -24,8 +24,8 @@
 ## ER다이어그램
 ```mermaid
 erDiagram
-    BATTERY ||--{ PICTURE : contains
-    PICTURE ||--{ DEFECT : contains
+    BATTERY ||--|{ PICTURE : contains
+    PICTURE ||--|{ DEFECT : contains
     CONDITION
     USER
 ```
