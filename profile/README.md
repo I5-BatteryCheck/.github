@@ -29,10 +29,48 @@
 ## ER다이어그램
 ```mermaid
 erDiagram
-    BATTERY ||--|{ PICTURE : contains
-    PICTURE ||--|{ DEFECT : contains
-    CONDITION
-    USER
+    BATTERY {
+        int batteryID PK
+        string result
+        date testDate
+        float batteryTemperature
+        float batteryHumidity
+        float batteryIlluminance
+    }
+
+    PICTURE {
+        int pictureID PK
+        int batteryID FK
+        string pictureName
+        int cameraNumber
+    }
+
+    DEFECT {
+        int defectID PK
+        string defectType
+        float x_Min
+        float x_Max
+        float y_Min
+        float y_Max
+    }
+
+    CONDITION {
+        int conditionID PK
+        datetime conditionDatetime
+        float insideTemperature
+        float insideHumidity
+        float insideIlluminance
+    }
+
+    USER {
+        int userID PK
+        string userPW
+        string userName
+    }
+
+    BATTERY ||--|{ PICTURE : has
+    PICTURE ||--|{ DEFECT : has
+
 ```
 
 
