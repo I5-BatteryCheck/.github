@@ -83,12 +83,12 @@ erDiagram
 	- ### 로그인
  - ![로그인화면]()
 	- ### 생산 관리 페이지
- - ![생산관리 화면]()
+ - ![생산관리 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC.png)
 	- ### 배터리 통계 페이지
- - ![배터리 통계 화면]()
+ - ![배터리 통계 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%ED%86%B5%EA%B3%84.png)
 	- ### 과거 조회 페이지
- - ![과거 조회 화면]()
+ - ![과거 조회 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%A1%B0%ED%9A%8C.png)
 	- ### 생산 환경 모니터링 페이지
- - ![생산 환경 모니터링 화면]()
+ - ![생산 환경 모니터링 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD.png)
 
 ## 세부 내용
