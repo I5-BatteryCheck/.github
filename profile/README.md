@@ -5,7 +5,7 @@
 
 ## Architecture
 ---
-![](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4v3-%ED%8E%98%EC%9D%B4%EC%A7%80-3.drawio.png)
+![아키텍쳐 그림](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4v3-%ED%8E%98%EC%9D%B4%EC%A7%80-3.drawio.png)
 ---
 
 ### 개발기간
@@ -16,15 +16,19 @@
 - 이하빈(팀장): AI
 - 강대호: AI
 - 김건우: 프론트 엔드
-- 박기범: 센서, 로봇팔
+- 박기범: LOW-LEVEL
 - 송재훈: 백엔드
 
 ## 개발 환경
-- **웹 서버**: 
-- **프로그래밍 언어**: 
-- **개발 도구**: 
-- **프레임워크**: 
-- **데이터베이스**:
+### Frontend
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white) ![figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+### Backend
+![spring](	https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![JAVA](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![MYSQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) 
+### AI
+![PYTHON](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FLASK](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![ULA]() ![YOLO]()
+### Low-Level
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![ARDUINO](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![RASPBERRY PI](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white) ![ESP32]() ![FLASK](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+
 
 ## ER다이어그램
 ```mermaid
@@ -75,6 +79,16 @@ erDiagram
 
 
 ## 주요 기능
-
+- 
+	- ### 로그인
+ - ![로그인화면]()
+	- ### 생산 관리 페이지
+ - ![생산관리 화면]()
+	- ### 배터리 통계 페이지
+ - ![배터리 통계 화면]()
+	- ### 과거 조회 페이지
+ - ![과거 조회 화면]()
+	- ### 생산 환경 모니터링 페이지
+ - ![생산 환경 모니터링 화면]()
 
 ## 세부 내용
