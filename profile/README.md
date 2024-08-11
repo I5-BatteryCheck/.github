@@ -98,35 +98,40 @@ erDiagram
 - 과거 배터리 생산, 불량, 상세 정보 조회 및 통계화
 - 웹을 통한 생산환경 실시간 모니터링
 
-  - ### 🔒 로그인 [로그인 상세 wiki]()
-  - ### 📦 생산 관리 [생산 관리 wiki]()
+  - ### 🔒 로그인 [로그인 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EB%A1%9C%EA%B7%B8%EC%9D%B8))
+  - ### 📦 생산 관리 [생산 관리 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC))
      - 실시간 카메라
      - 탐지 결과
      - 생산량 설정
-     - 
-  - ### 📈 배터리 통계 [배터리 통계 wiki]()
+  - ### 📈 배터리 통계 [배터리 통계 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EB%B0%B0%ED%84%B0%EB%A6%AC-%ED%86%B5%EA%B3%84))
      - 목표수량 달성 현황 그래프
      - 불량율 및 불량비율 그래프
      - 최근 생산량, 불량율, 불량 유형, 동작 시간 그래프
-  - ### 👀 과거 조회 [과거 조회 wiki]()
+  - ### 👀 과거 조회 [과거 조회 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EA%B3%BC%EA%B1%B0-%EC%A1%B0%ED%9A%8C))
      - 기간, 배터리 유형, 카메라 번호를 선택하여 필터링
      - 날짜, 판정, 결함유형, 카메라, 사진 조회기능
-  - ### 🌡️ 생산 환경 모니터링 [생산 환경 모니터링 wiki]()
+  - ### 🌡️ 생산 환경 모니터링 [생산 환경 모니터링 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD-%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81))
      - 실시간 온도, 습도, 조도, 가스 센서
      - 일별 온도, 습도, 조도, 가스 통계
      - 최적화 지수
 
 ---
 
-## 프로젝트 결과물
-- 
-	- ### 로그인
+<div align="center">
+	
+## 🎬 프로젝트 결과물
+### 로그인
   ![로그인화면]()
-	- ### 생산 관리 페이지
+### 생산 관리 페이지
   ![생산관리 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC.png)
-	- ### 배터리 통계 페이지
+  
+### 배터리 통계 페이지
   ![배터리 통계 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%ED%86%B5%EA%B3%84.png)
-	- ### 과거 조회 페이지
+  
+### 과거 조회 페이지
   ![과거 조회 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%A1%B0%ED%9A%8C.png)
-	- ### 생산 환경 모니터링 페이지
+  
+### 생산 환경 모니터링 페이지
   ![생산 환경 모니터링 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD.png)
+  
+</div>
