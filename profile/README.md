@@ -13,6 +13,7 @@
 
 ---
 
+
 ### 📅 개발기간
 - 2024.07.01 ~ 2024.08.20
 
@@ -42,7 +43,7 @@
 
 ---
 
-## 📄 ER다이어그램
+## 📄 ER Diagram
 ```mermaid
 erDiagram
     BATTERY {
@@ -87,6 +88,289 @@ erDiagram
     BATTERY ||--|{ PICTURE : has
     PICTURE ||--|{ DEFECT : has
 
+```
+
+---
+
+## 📐 Class Diagram
+
+``` mermaid
+classDiagram
+direction BT
+class Battery {
+  - Long id
+  - Double temperature
+  - Double illuminance
+  - Double pollutionLevel
+  - LocalDateTime testDate
+  - Double humidity
+  - Double gas
+  - Result result
+  - Double damagedLevel
+  + getId() Long
+  + getResult() Result
+  + setTestDate(LocalDateTime) void
+  + getTestDate() LocalDateTime
+  + builder() BatteryBuilder
+  + getTemperature() Double
+  + setTemperature(Double) void
+  + setHumidity(Double) void
+  + getHumidity() Double
+  + setIlluminance(Double) void
+  + getIlluminance() Double
+  + getPollutionLevel() Double
+  + getGas() Double
+  + setDamagedLevel(Double) void
+  + setPollutionLevel(Double) void
+  + setGas(Double) void
+  + setId(Long) void
+  + setResult(Result) void
+  + getDamagedLevel() Double
+}
+class BatteryController {
+  - BatteryService batteryService
+  - getAllDefectRatio() ApiResponse~BatteryResponseDto~
+  + getBatteryConditionAverage() ApiResponse~List~BatteryConditionDailyResponseDto~~
+  + getProductCountRecent5days() ApiResponse~List~BatteryDailyCountResponseDto~~
+  - searchDefectRatioByDate() ApiResponse~List~BatteryDailyResponseDto~~
+  + getBatteryCondition(Long) ApiResponse~BatteryConditionResponseDto~
+}
+class BatteryRepository {
+<<Interface>>
+  + findFirstByOrderByIdDesc() Battery
+  + countByResult(Result) Long
+  + countByResultAndTestDateBetween(Result, LocalDateTime, LocalDateTime) Long
+  + countByTestDateBetween(LocalDateTime, LocalDateTime) Long
+  + findBatteryConditionAverage(LocalDateTime, LocalDateTime) BatteryConditionResponseDto
+}
+class BatteryService {
+  - BatteryRepository batteryRepository
+  + countAll() Long
+  + findById(Long) Battery
+  + findProductCountRecent5days() Map~Integer, Long~
+  + findBatteryConditionAverageRecent5days() Map~Integer, BatteryConditionDailyResponseDto~
+  + findRecent5Dates() List~LocalDate~
+  + calculateAllNormalRatio() Double
+  + save(Battery) Long
+  + findBatteryCondition(Long) BatteryConditionResponseDto
+  + calculateNormalRatioRecent5days() Map~Integer, Double~
+  + findLatestBattery() Battery
+}
+class Defect {
+  - String xMax
+  - String yMin
+  - String yMax
+  - Long id
+  - Picture picture
+  - String xMin
+  - Battery battery
+  - Type type
+  + getId() Long
+  + builder() DefectBuilder
+  + setId(Long) void
+  + setBattery(Battery) void
+  + setXMin(String) void
+  + getType() Type
+  + getXMin() String
+  + setYMin(String) void
+  + setPicture(Picture) void
+  + getXMax() String
+  + setType(Type) void
+  + setYMax(String) void
+  + setXMax(String) void
+  + getYMin() String
+  + getYMax() String
+  + getBattery() Battery
+  + getPicture() Picture
+}
+class DefectController {
+  - DefectService defectService
+  + getDefectRate() ApiResponse~DefectRateResponseDto~
+  + getDefectTypeCountByDate() ApiResponse~List~BatteryDefectTypeResponseDto~~
+}
+class DefectRepository {
+<<Interface>>
+  + findByBatteryTestDateBetween(LocalDateTime, LocalDateTime) List~Defect~
+}
+class DefectService {
+  - DefectRepository defectRepository
+  - BatteryService batteryService
+  + save(Defect) Long
+  + countDefectTypeRecent5days() Map~Integer, Map~String, Long~~
+  + getDefectRate() DefectRateResponseDto
+  - getDefectsCount(List~Defect~) Map~String, Long~
+}
+class FileController {
+  - BatteryService batteryService
+  - Long batteryId
+  - Logger log
+  - FileUploadService fileUploadService
+  - FileService fileService
+  + uploadPicture(List~MultipartFile~, FileRequestDto) ApiResponse~FileResponseDto~
+}
+class FileDownloadService {
+  - AmazonS3Client amazonS3Client
+  - String bucket
+  + getImageFile(String) byte[]
+}
+class FileName {
+  - String originalName
+  - String savedName
+  - String savedPath
+  - String extensionName
+  + getOriginalName() String
+  + getSavedName() String
+  + getSavedPath() String
+  + getExtensionName() String
+  + builder() FileNameBuilder
+}
+class FileRepository {
+<<Interface>>
+  + findByBatteryIdAndCameraNumber(Long, Integer) UploadedFile
+  + findByPicture(Picture) UploadedFile
+  + findRecentThree() List~UploadedFile~
+}
+class FileService {
+  - BatteryService batteryService
+  - DefectService defectService
+  - PictureService pictureService
+  - FileRepository fileRepository
+  + save(FileDto, FileRequestDto, Long) List~Long~
+}
+class FileUploadService {
+  - Logger log
+  - AmazonS3Client amazonS3Client
+  - String bucket
+  + uploadFiles(List~MultipartFile~) Map~String, File~
+  - removeNewFile(File) void
+  - upload(File, String) String
+  + uploadFile(MultipartFile) Map~String, File~
+  - putS3(File, String) String
+  - convert(MultipartFile) Optional~File~
+}
+class Picture {
+  - Long id
+  - String pictureName
+  - List~Defect~ Defects
+  - Integer cameraNumber
+  - Battery battery
+  + builder() PictureBuilder
+  + getId() Long
+  + getBattery() Battery
+  + getPictureName() String
+  + getCameraNumber() Integer
+  + getDefects() List~Defect~
+  + setId(Long) void
+  + setBattery(Battery) void
+  + setPictureName(String) void
+  + setCameraNumber(Integer) void
+  + setDefects(List~Defect~) void
+}
+class PictureController {
+  - FileDownloadService fileDownloadService
+  - PictureService pictureService
+  - FileRepository fileRepository
+  + getImage() ApiResponse~PictureWebResponseDto~
+  + getStatistics(LocalDateTime, LocalDateTime, List~Result~, List~Type~, List~Integer~) ApiResponse~List~PictureFilterResponseDto~~
+}
+class PictureRepository {
+<<Interface>>
+  + findByBatteryIdAndCameraNumber(Long, Integer) Picture
+  + findAllByFilters(LocalDateTime, LocalDateTime, List~Result~, List~Type~, List~Integer~) List~Picture~
+}
+class PictureService {
+  - FileRepository fileRepository
+  - PictureRepository pictureRepository
+  - FileDownloadService fileDownloadService
+  + save(Picture) Long
+  + getStatistics(LocalDateTime, LocalDateTime, List~Result~, List~Type~, List~Integer~) List~PictureFilterResponseDto~
+  + findByBatteryIdAndCameraNumber(Long, Integer) Picture
+}
+class Result {
+<<enumeration>>
+  +  DAMAGED
+  - String key
+  - String description
+  +  NORMAL
+  +  BOTH
+  +  POLLUTION
+  + getKey() String
+  + getDescription() String
+  + values() Result[]
+  + valueOf(String) Result
+}
+class Type {
+<<enumeration>>
+  +  POLLUTION
+  +  DAMAGED
+  - String key
+  - String description
+  + values() Type[]
+  + getKey() String
+  + getDescription() String
+  + valueOf(String) Type
+}
+class UploadedFile {
+  - long size
+  - FileName fileName
+  - Long id
+  - String mimeType
+  - Picture picture
+  + getSize() long
+  + getId() Long
+  + getFileName() FileName
+  + getMimeType() String
+  + setPicture(Picture) void
+  + builder() UploadedFileBuilder
+  + getPicture() Picture
+  + setId(Long) void
+  + setFileName(FileName) void
+  + setSize(long) void
+  + setMimeType(String) void
+}
+class User {
+  - Long id
+  - String password
+  - String username
+  + getId() Long
+  + getUsername() String
+  + getPassword() String
+  + setId(Long) void
+  + setUsername(String) void
+  + setPassword(String) void
+  + builder() UserBuilder
+}
+class UserRepository {
+<<Interface>>
+
+}
+
+Battery "1" *--> "result 1" Result 
+BatteryController "1" *--> "batteryService 1" BatteryService 
+BatteryService "1" *--> "batteryRepository 1" BatteryRepository 
+Defect "1" *--> "battery 1" Battery 
+Defect "1" *--> "picture 1" Picture 
+Defect "1" *--> "type 1" Type 
+DefectController "1" *--> "defectService 1" DefectService 
+DefectService "1" *--> "batteryService 1" BatteryService 
+DefectService "1" *--> "defectRepository 1" DefectRepository 
+FileController "1" *--> "batteryService 1" BatteryService 
+FileController "1" *--> "fileService 1" FileService 
+FileController "1" *--> "fileUploadService 1" FileUploadService 
+FileService "1" *--> "batteryService 1" BatteryService 
+FileService "1" *--> "defectService 1" DefectService 
+FileService "1" *--> "fileRepository 1" FileRepository 
+FileService "1" *--> "pictureService 1" PictureService 
+Picture "1" *--> "battery 1" Battery 
+Picture "1" *--> "Defects *" Defect 
+PictureController "1" *--> "fileDownloadService 1" FileDownloadService 
+PictureController "1" *--> "fileRepository 1" FileRepository 
+PictureController "1" *--> "pictureService 1" PictureService 
+PictureService "1" *--> "fileDownloadService 1" FileDownloadService 
+PictureService "1" *--> "fileRepository 1" FileRepository 
+PictureService "1" *--> "pictureRepository 1" PictureRepository 
+UploadedFile "1" *--> "fileName 1" FileName 
+UploadedFile "1" *--> "picture 1" Picture 
 ```
 
 ---
