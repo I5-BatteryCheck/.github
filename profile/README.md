@@ -30,7 +30,7 @@
 
 ## ⚙️ 개발 환경
 ### 🌐 Frontend
-![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white) ![figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white) ![figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
 ### 💻 Backend
 ![spring](	https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white) ![JAVA](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white) ![MYSQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) 
 ### 🤖 AI
@@ -382,7 +382,6 @@ UploadedFile "1" *--> "picture 1" Picture
 - 과거 배터리 생산, 불량, 상세 정보 조회 및 통계화
 - 웹을 통한 생산환경 실시간 모니터링
 
-  - ### 🔒 로그인 [로그인 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EB%A1%9C%EA%B7%B8%EC%9D%B8))
   - ### 📦 생산 관리 [생산 관리 상세 wiki](https://github.com/I5-BatteryCheck/.github/wiki/%EA%B8%B0%EB%8A%A5(%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC))
      - 실시간 카메라
      - 탐지 결과
