@@ -375,6 +375,13 @@ UploadedFile "1" *--> "picture 1" Picture
 
 ---
 
+## 🧾 API 명세서
+
+![명세서 1](https://github.com/I5-BatteryCheck/.github/blob/main/profile/API%EB%AA%85%EC%84%B8%EC%84%9C_1.png)
+![명세서 2](https://github.com/I5-BatteryCheck/.github/blob/main/profile/API%EB%AA%85%EC%84%B8%EC%84%9C_2.png)
+
+---
+
 ## ⭐ 주요 기능
 
 - 온도, 습도, 조도, 가스 센서 데이터 시각화
