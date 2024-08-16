@@ -46,47 +46,65 @@
 ## 📄 ER Diagram
 ```mermaid
 erDiagram
-    BATTERY {
-        int batteryID PK
-        string result
-        date testDate
-        float batteryTemperature
-        float batteryHumidity
-        float batteryIlluminance
-    }
-
     PICTURE {
-        int pictureID PK
-        int batteryID FK
-        string pictureName
-        int cameraNumber
+        BIGINT id
+        INT camera_number
+        VARCHAR picture_name
+        BIGINT battery_id
     }
-
+    UPLOADED_FILE {
+        BIGINT id
+        CHAR extension_name
+        VARCHAR original_name
+        VARCHAR saved_name
+        VARCHAR saved_path
+        VARCHAR mime_type
+        BIGINT size
+        BIGINT picture_id
+    }
     DEFECT {
-        int defectID PK
-        string defectType
-        float x_Min
-        float x_Max
-        float y_Min
-        float y_Max
+        BIGINT id
+        TINYINT type
+        VARCHAR x_m
+        VARCHAR x_mn
+        VARCHAR y_m
+        VARCHAR y_mn
+        BIGINT battery_id
+        BIGINT picture_id
+    }
+    BATTERY {
+        BIGINT id
+        DOUBLE damaged_level
+        DOUBLE gas
+        DOUBLE humidity
+        DOUBLE illuminance
+        DOUBLE pollution_level
+        TINYINT result
+        DOUBLE temperature
+        DATETIME test_date
+    }
+    PULSE {
+        BIGINT id
+        BIGINT battery_id
+    }
+    PULSE_FREQUENCY {
+        BIGINT pulse_id
+        DOUBLE frequency
+        INT frequency_order
+    }
+    PULSE_MAGNITUDE {
+        BIGINT pulse_id
+        DOUBLE magnitude
+        INT magnitude_order
     }
 
-    CONDITION {
-        int conditionID PK
-        datetime conditionDatetime
-        float insideTemperature
-        float insideHumidity
-        float insideIlluminance
-    }
-
-    USER {
-        int userID PK
-        string userPW
-        string userName
-    }
-
-    BATTERY ||--|{ PICTURE : has
-    PICTURE ||--|{ DEFECT : has
+    PICTURE ||--o| BATTERY : "battery_id"
+    DEFECT ||--o| PICTURE : "picture_id"
+    DEFECT ||--o| BATTERY : "battery_id"
+    UPLOADED_FILE ||--o| PICTURE : "picture_id"
+    PULSE ||--o| BATTERY : "battery_id"
+    PULSE_FREQUENCY ||--o| PULSE : "pulse_id"
+    PULSE_MAGNITUDE ||--o| PULSE : "pulse_id"
 
 ```
 
