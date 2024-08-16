@@ -92,7 +92,7 @@ erDiagram
 
 ---
 
-## 📐 Class Diagram
+## 📐 UML Class Diagram
 
 ``` mermaid
 classDiagram
