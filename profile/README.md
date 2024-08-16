@@ -9,7 +9,7 @@
 
 ## 🔍 Architecture
 
-![아키텍쳐 그림](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4v3-%ED%8E%98%EC%9D%B4%EC%A7%80-3.drawio.png)
+![아키텍쳐 그림](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4v4.jpg)
 
 ---
 
@@ -411,15 +411,15 @@ UploadedFile "1" *--> "picture 1" Picture
 	
 ## 🎬 프로젝트 결과물
 ### 생산 관리 페이지
-  ![생산관리 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC.png)
+  ![생산관리 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%83%9D%EC%82%B0%EA%B4%80%EB%A6%AC.png)
   
 ### 배터리 통계 페이지
-  ![배터리 통계 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%ED%86%B5%EA%B3%84.png)
+  ![배터리 통계 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%83%9D%EC%82%B0%ED%86%B5%EA%B3%84.png)
   
 ### 과거 조회 페이지
-  ![과거 조회 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%A1%B0%ED%9A%8C.png)
+  ![과거 조회 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EA%B3%BC%EA%B1%B0%EC%A1%B0%ED%9A%8C.png)
   
 ### 생산 환경 모니터링 페이지
-  ![생산 환경 모니터링 화면](https://github.com/I5-BatteryCheck/.github/blob/main/profile/%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD.png)
+  ![생산 환경 모니터링 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD.png)
   
 </div>
