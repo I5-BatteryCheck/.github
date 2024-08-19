@@ -1,5 +1,5 @@
 # 🔋 배터리 양불판정 및 분류
-(https://github.com/I5-BatteryCheck/.github/blob/main/profile/i5-readme-video.gif)
+![작동 영상](https://github.com/I5-BatteryCheck/.github/blob/main/profile/i5-readme-video.gif)
 ---
 
 ## 📄프로젝트 개요
