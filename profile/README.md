@@ -438,6 +438,6 @@ UploadedFile "1" *--> "picture 1" Picture
   ![과거 조회 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EA%B3%BC%EA%B1%B0%EC%A1%B0%ED%9A%8C.png)
   
 ### 생산 환경 모니터링 페이지
-  ![생산 환경 모니터링 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD.png)
+  ![생산 환경 모니터링 화면](https://github.com/I5-BatteryCheck/.github/blob/main/%EC%83%9D%EC%82%B0%ED%99%98%EA%B2%BD.jpg)
   
 </div>
